@@ -1,0 +1,380 @@
+/* Created by Luciano Nieves - 11/05/2021 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*==================================*/
+/* VARIABLES */
+/*==================================*/
+:root {
+    --color-dark-black: #111821;
+    --color-light-black: #253343;
+    --color-light-white: #f9fbfd;
+    --color-dark-white: #f1f0f0;
+    --color-light-purple: #625EE0;
+    --color-dark-purple: #A445FD;
+    --color-dark2-purple: #9932CC;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+/*==================================*/
+/* BODY */
+/*==================================*/
+body {
+    height: 100vh;
+    font-family: 'Great Vibes', sans-serif;
+    line-height: 1.5;
+    font-size: 30px;
+    background-color: var(--color-light-white);
+    user-select: none;
+}
+
+/*==================================*/
+/* NAV MENU */
+/*==================================*/
+.nav-menu {
+    height: 4rem;
+    width: 100vw;
+
+    font-family: 'Playball', sans-serif;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+    background-color: var(--color-dark-white);
+
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.small-nav-title {
+    font-family: 'Great Vibes', sans-serif;
+    position: relative;
+    height: 3rem;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.small-nav-title:visited {
+    color: black;
+}
+
+.small-title {
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    font-size: 1.7rem;
+    font-style: italic;
+    
+    word-spacing: 2.4rem;
+    z-index: -2;
+}
+
+.small-logo {
+    height: 3rem;
+    width: 7rem;
+    position: absolute;
+    left: 0.5rem;
+}
+
+.small-logo:hover {
+    cursor: pointer;
+    animation: shakeCone 1s ease-out infinite;
+}
+
+.nav-menu ul {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.nav-menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 0.37s;
+}
+
+.nav-menu ul li a:hover {
+    color: var(--color-dark-purple);
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid rgba(183, 0, 255, 0.2);
+}
+
+/*==================================*/
+/* HOME */
+/*==================================*/
+#home {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-landing {
+    height: 25rem;
+    width: 60rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-landing img {
+    height: 100%;
+}
+
+.home-titles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-titles h1 {
+    font-size: 5rem;
+    color: var(--color-dark-black);
+    border-bottom: 0.2rem solid var(--color-light-purple);
+    border-radius: 45%;
+}
+
+.home-titles h3 {
+    color: var(--color-light-black);
+}
+
+.home-titles a {
+    padding: 0 1rem;
+    background-color: var(--color-light-purple);
+    color: black;
+    text-decoration: none;
+    border-radius: 0.3rem;
+    transition: linear 0.25s;
+    font-family: 'Playball', sans-serif;
+}
+
+.home-titles a:hover {
+    color: var(--color-light-white);
+}
+
+/*==================================*/
+/* PRODUCTS */
+/*==================================*/
+#products {
+    height: 110vh;
+    background-color: var(--color-dark-white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-landing {
+    height: 70vh;
+    width: 85%;
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.best-product-card,
+.product-card {
+    background-color: var(--color-light-white);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-card {
+    height: 23rem;
+    width: 18rem;
+    box-shadow: 0px 10px 10px -5px var(--color-dark-black);
+}
+
+.product-card h3 {
+    margin-top: 2rem;
+}
+
+.product-card img {
+    padding: 0.25rem 0.25rem;
+    height: 50%;
+    filter: drop-shadow(0 0 0.1rem var(--color-light-black));
+}
+
+.product-card p {
+    width: 12rem;
+    margin-top: 1rem;
+    background-color: #625EE0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: linear 0.25s;
+    font-family: 'Playball', sans-serif;
+}
+
+.product-card p:hover {
+    color: var(--color-light-white);
+}
+
+/* best product */
+.best-product-card {
+    height: 28rem;
+    width: 21rem;
+    filter: drop-shadow(0 0 0.75rem var(--color-light-purple));
+    box-shadow: 0px 10px 10px -10px var(--color-dark-black);
+}
+
+.best-product-card h3 {
+    margin-top: -1rem;
+}
+
+.best-product-card i {
+    padding: 0.5rem 0.7rem;
+    color: rgb(240, 196, 0);
+    cursor: pointer;
+}
+
+.best-product-card img {
+    margin-top: -0.5rem;
+    height: 70%;
+    filter: drop-shadow(0 0 0.1rem var(--color-light-black));
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.best-product-card p {
+    width: 12rem;
+    margin-top: -1.25rem;
+    background-color: #625EE0;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: linear 0.25s;
+    font-family: 'Playball', sans-serif;
+}
+
+.best-product-card p:hover {
+    color: var(--color-light-white);
+}
+
+/* tooltip for the best product */
+.tooltip {
+    position: relative;
+    right: -80%;
+    width: 4rem;
+}
+
+.tooltip .tooltip-text {
+    width: 120px;
+    visibility: hidden;
+
+    position: absolute;
+    right: -2rem;
+    bottom: 100%;
+
+    font-family: 'Playball', sans-serif;
+    font-size: 1.5rem;
+    color: var(--color-dark-black);
+    text-align: center;
+    border-radius: 6px;
+    padding: 1rem 0;
+    
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+}
+
+/*==================================*/
+/* ABOUT */
+/*==================================*/
+#about {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-landing {
+    height: 30rem;
+    width: 75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Playball', sans-serif;
+}
+
+.about-landing h3 {
+    font-size: 3.5rem;
+    font-family: 'Great Vibes', sans-serif;
+    border-bottom: 0.3rem dotted var(--color-light-purple);
+}
+
+/* =========================== */
+/* SOCIAL BUTTONS */
+/* =========================== */
+.socials {
+    height: 10rem;
+    width: 14rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.7rem;
+    margin-top: 4rem;
+}
+
+.fa-linkedin-in,
+.fa-github {
+    color: var(--color-light-purple);
+    transition: linear 0.2s;
+}
+
+.fa-linkedin-in:hover,
+.fa-github:hover {
+    color: var(--color-dark2-purple);
+    transform: scale(1.1, 1.1);
+}
+
+/*==================================*/
+/* KEYFRAMES */
+/*==================================*/
+@keyframes shakeCone {
+    0% {
+        transform: rotateZ(-30deg);
+    }
+    
+    50% {
+        transform: rotateZ(30deg);
+    }
+
+    100% {
+        transform: rotateZ(-30deg);
+    }
+}
